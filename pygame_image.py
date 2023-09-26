@@ -20,7 +20,7 @@ def main():
         
         
         x = tmr%1600
-        screen.blit(bg_img, [x, 0])
+        screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img, [1600-x, 0])
         if tmr % 2 == 0:
             screen.blit(bd_move[0],[300, 200])
