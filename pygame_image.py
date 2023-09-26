@@ -20,16 +20,13 @@ def main():
         
         
         x = tmr%1600
-        print(x)
         screen.blit(bg_img, [-x, 0])
         y = pg.transform.flip(bg_img, True, False)
         screen.blit(y, [1600-x, 0])
         
         
-        if tmr % 10 == 0:
-            screen.blit(bd_move[0],[300, 200])
-        else:
-            screen.blit(bd_move[1],[300, 200])
+        screen.blit(bd_move[int (tmr/50)%2],[300, 200])
+
         #screen.blit(bd_move[trm%2],[300, 200])
         pg.display.update()
         tmr += 1        
